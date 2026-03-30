@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner Picker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <img src="images/headerimg.jpg" alt="" class="headerimg" />
+      </div>
+    </div>
+
+    <div id="pickerinfo">
+      <div class="container">
+        <p class="info-text">
+            <h1>Hi! Welcome to the <span>Partner Picker</span></h1>
+            <h5>This website is created to help you pick your accountability group. Should be fun.<br>No worries, the process is random but the persons you get, that's destiny.</h5>
+        </p>
+      </div>
+    </div>
+    <a href="#pick-partner-form" class="btn">Know your group</a>
+
+    <div id="pick-partner-form">
+        <div class="container">
+            <h3 class="warning-text">Enter your name ID accuately, then pick a number. ID is case sensitive.</h3>
+            <input type="text" id="playerName" placeholder="Enter your Name ID">
+            <div id="inputFeedback" class="feedback-text"></div>
+            <div id="buttonGrid" class="button-grid">
+                <button class="number-btn" onclick="submitVote(1)">1</button>
+                <button class="number-btn" onclick="submitVote(2)">2</button>
+                <button class="number-btn" onclick="submitVote(3)">3</button>
+                <button class="number-btn" onclick="submitVote(4)">4</button>
+            </div>
+            <p id="statusMessage" class="status-message"></p>
+            <button id="checkGroupBtn" class="number-btn" style="display: none; width: 70%; font-size: 18px; margin-top: 15px;" onclick="checkMyGroup()">
+            🔄 Check Who Joined My Group
+        </button>
+            <button id="resetBtn" onclick="resetMemory()">Reset My Phone's Memory</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
