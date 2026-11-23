@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner Picker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <!--<img src="images/img.png" class="headerimg">-->
+        <video autoplay muted loop playsinline poster="images/img.png" class="header-video">
+            <source src="images/vid.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+
+    <div id="pickerinfo">
+      <div class="container">
+        <p class="info-text">
+            <h1>Hi! Welcome to the <span>Partner Picker</span></h1>
+            <h5>This website is created to help you pick your accountability group. Should be fun.<br>No worries, the process is random but the people you get, that's destiny.</h5>
+        </p>
+      </div>
+    </div>
+    <a href="#pick-partner-form" class="btn">Know your group below</a>
+
+    <div id="pick-partner-form">
+      <div class="container">
+        <!--<h3 class="warning-text">Enter your name ID accurately, then pick a number.<br> ID is case sensitive.</h3>-->
+        <input type="text" id="playerName" placeholder="Enter your Name ID">
+        <div id="inputFeedback" class="feedback-text"></div>
+        <div id="buttonGrid" class="button-grid">
+          <button class="number-btn" onclick="submitVote(1)">1</button>
+          <button class="number-btn" onclick="submitVote(2)">2</button>
+          <button class="number-btn" onclick="submitVote(3)">3</button>
+          <button class="number-btn" onclick="submitVote(4)">4</button>
+          <button class="number-btn" onclick="submitVote(5)">5</button>
+          <button class="number-btn" onclick="submitVote(6)">6</button>
+          <button class="number-btn" onclick="submitVote(7)">7</button>
+          <button class="number-btn" onclick="submitVote(8)">8</button>
+          <button class="number-btn" onclick="submitVote(9)">9</button>
+        </div>
+        <p id="statusMessage" class="status-message"></p>
+        <button id="checkGroupBtn" class="number-btn" style="display: none; width: 60%; font-size: 18px; margin-top: 15px;" onclick="checkMyGroup()">
+        🔄 Check who joined my group
+        </button>
+        <p id="waitingTip" style="display: none; font-size: 14px; color: #555; margin-top: 10px; font-style: italic;">
+            💡 Tip: Click the button above every 5 minutes until you see two more group partners!
+        </p>
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

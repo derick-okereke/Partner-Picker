@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+#header {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding-bottom: 100px;
+  justify-items: center;
+}
+
+/*.headerimg {
+  display: block;
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center top;
+}*/
+
+.header-video {
+  width: 100%;
+  height: 580px; /* Match the height we set for your image earlier */
+  object-fit: cover; /* Ensures the video fills the area without stretching */
+  display: block;
+  object-position: center top; /* Keeps the faces in view! */
+}
+
+#header {
+  overflow: hidden; /* Ensures the video doesn't "leak" out of the rounded corners */
+}
+
+#pickerinfo .container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 140px 140px 0 0;
+  padding: 30px;
+  margin-top: -280px;
+  position: relative;
+  min-height: 5vh;
+  justify-content: center;
+}
+
+.info-text {
+  padding-top: 20px;
+}
+
+#pickerinfo h1 {
+  font-size: 46px;
+  text-align: center;
+}
+
+#pickerinfo h1 span {
+  color: blue;
+}
+
+#pickerinfo h5 {
+  padding-top: 30px;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-weight: 200;
+  font-size: 19px;
+  text-align: center;
+  text-wrap: pretty;
+  color: rgb(27, 1, 1);
+}
+
+.btn {
+  display: flex;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid transparent;
+  padding: 14px 40px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: blueviolet;
+  color: white;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.warning-text {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  margin-top: 20px;
+  font-weight: 200;
+  color: rgb(27, 1, 1);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#pick-partner-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+input {
+  width: 60%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.feedback-text {
+  color: #d9534f; /* A nice, soft warning red */
+  font-size: 14px;
+  margin-top: -15px; /* Pulls it closer to the input box above it */
+  margin-bottom: 15px;
+  min-height: 18px; /* Keeps the empty space reserved so buttons don't jump */
+  font-weight: bold;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.number-btn {
+  background-color: blueviolet;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.number-btn:hover {
+  background-color: #0056b3;
+}
+
+.number-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.status-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#resetBtn {
+  margin-top: 40px;
+  background: transparent;
+  border: none;
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+/* -------------------media queries--------------------------- */
+
+/* When the screen is 768px wide or smaller (typical tablet/mobile size) */
+@media (max-width: 568px) {
+  #pickerinfo .container {
+    margin-top: -40px; /* A much smaller pull-up for smaller screens */
+    border-radius: 20px 20px 0 0; /* Optional: Make the curve slightly less sharp on mobile */
+    padding: 30px 15px; /* Optional: Reduce padding so text fits better */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-video {
+    height: 200px;
+  }
+}
